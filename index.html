@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yokostyle</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navbar -->
     <header>
         <nav>
-			<img class="logo" src="images/logo.png" alt="Yokostyle">
+            <img class="logo" src="images/logo.png" alt="Yokostyle">
             <h1 class="site-name">Yokostyle</h1>
             <div class="search-bar">
                 <input type="text" placeholder="Search for products..." class="search-input">
@@ -27,31 +28,48 @@
         </nav>
     </header>
 
-    <!-- Product Section -->
+    <!-- Main Navigation for Best Sellers -->
+    <section class="main-navigation">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#site">SITE</a></li>
+            <li><a href="#qa">Q&A</a></li>
+        </ul>
+    </section>
+
+    <!-- Product Carousel Section -->
     <section class="best-sellers" id="products">
-		<h1>Best Sellers</h1>
-        <div class="product-list">
-            <!-- Product Item 1 -->
-            <div class="product-item">
-                <img src="images/jacket1.jpg" alt="Starboy jacket">
-                <h3>Starboy jacket</h3>
-                <p>$29.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+        <h1>Best Sellers</h1>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="previousProduct()">&#10094;</button>
+
+            <div class="product-list">
+                <!-- Product Item 1 -->
+                <div class="product-item small">
+                    <img src="images/cap1.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>$19.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Product Item 2 - Highlighted -->
+                <div class="product-item large">
+                    <img src="images/jacket1.jpg" alt="Starboy jacket">
+                    <h3>Starboy jacket</h3>
+                    <p>$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Product Item 3 -->
+                <div class="product-item small">
+                    <img src="images/glasses_blue.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$39.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <!-- Product Item 2 -->
-            <div class="product-item">
-                <img src="images/cap1.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <!-- Product Item 3 -->
-            <div class="product-item">
-                <img src="images/glasses_blue.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>$39.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
+
+            <button class="carousel-button right" onclick="nextProduct()">&#10095;</button>
         </div>
     </section>
 
@@ -61,6 +79,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <!-- Search Bar Container -->
 </body>
 </html>
