@@ -156,7 +156,6 @@ header nav .nav-links img {
 .best-sellers .carousel-container {
     position: relative;
     margin: auto;
-    max-width: 80%;
     color: #000000;
 	
     display: grid;
