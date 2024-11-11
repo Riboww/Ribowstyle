@@ -203,6 +203,7 @@ header nav .nav-links img {
 /* Left product - smaller and slightly faded */
 .best-sellers .carousel-container .product-list .product-item.left {
 	grid-column: 2;
+	grid-row: 1;
 	place-self: start center;
 	
     transform: scale(0.9);
@@ -212,6 +213,7 @@ header nav .nav-links img {
 /* Center product - largest and in full opacity */
 .best-sellers .carousel-container .product-list .product-item.center {
 	grid-column: 4;
+	grid-row: 1;
 	place-self: start center;
 	
     transform: scale(1.2);
@@ -221,6 +223,7 @@ header nav .nav-links img {
 /* Right product - smaller and slightly faded */
 .best-sellers .carousel-container .product-list .product-item.right {
 	grid-column: 6;
+	grid-row: 1;
 	place-self: start center;
 	
     transform: scale(0.9);
