@@ -9,11 +9,13 @@
 body {
     color: #ffffff;
     background: linear-gradient(135deg, #ffffff, #333);
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: min-content 20px min-content 20px 1fr min-content;
     min-width: min-content;
     min-height: 100vh;
+	
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content 1fr min-content;
+	row-gap: 20px;
 }
 
 header {
@@ -23,11 +25,12 @@ header {
 }
 
 header nav {
+    padding: 0 20px;
+	
     display: grid;
     grid-template-columns: 80px auto 1fr minmax(400px, 2fr) 1fr auto;
     grid-template-rows: 80px;
 	column-gap: 20px;
-    padding: 0 20px;
 }
 
 header nav .logo {
@@ -108,7 +111,7 @@ header nav .nav-links img {
 
 /* Main Navigation */
 .main-navigation {
-	grid-row: 3;
+	grid-row: 2;
 	place-self: center center;
 	
     background-color: black;
@@ -138,12 +141,13 @@ header nav .nav-links img {
 }
 /* Product Carousel Section */
 .best-sellers {
-	grid-row: 5;
+	grid-row: 3;
 	place-self: start stretch;
 	
     padding: 40px 20px;
     text-align: center;
-    margin-top: 40px; /* space between title and carousel */
+	
+	display: grid;
 }
 
 .best-sellers h1 {
@@ -154,22 +158,19 @@ header nav .nav-links img {
 
 /* Product Carousel Section */
 .best-sellers .carousel-container {
-    position: relative;
-    margin: auto;
-    color: #000000;
+	place-self: start center;
 	
     display: grid;
-    grid-template-columns: 40px 40px 1fr 40px 40px;
+    grid-template-columns: 40px 40px min-content 40px 40px;
     grid-template-rows: auto;
 }
 
 /* Carousel Buttons */
-.carousel-button-left {
+.best-sellers .carousel-container .carousel-button.left {
 	grid-column: 1;
 	place-self: center center;
 	
 	width: 40px;
-	height: 40px;
     background: none;
     border: none;
     font-size: 30px;
@@ -183,51 +184,42 @@ header nav .nav-links img {
 	place-self: center stretch;
 	
     display: grid;
-    grid-template-columns: 1fr 300px 40px 400px 40px 300px 1fr;
+    grid-template-columns: 1000px;
     grid-template-rows: auto;
 }
 
-/* Define initial styles for each product position */
 .best-sellers .carousel-container .product-list .product-item {
-    width: 300px;
+	grid-column: 1;
+	grid-row: 1;
+	place-self: start center;
 	
+    width: 300px;
     background: white;
+	color: black;
     padding: 20px;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    gap: 40px;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Left product - smaller and slightly faded */
+.best-sellers .carousel-container .product-list .product-item p {
+	margin: 10px;
+}
+
 .best-sellers .carousel-container .product-list .product-item.left {
-	grid-column: 2;
-	grid-row: 1;
-	place-self: start center;
-	
-    transform: scale(0.9);
-    opacity: 0.7;
+    transform: scale(0.9) translateX(-400px);
+	z-index: 0;
 }
 
-/* Center product - largest and in full opacity */
 .best-sellers .carousel-container .product-list .product-item.center {
-	grid-column: 4;
-	grid-row: 1;
-	place-self: start center;
-	
     transform: scale(1.2);
-    opacity: 1;
+	z-index: 1;
 }
 
-/* Right product - smaller and slightly faded */
 .best-sellers .carousel-container .product-list .product-item.right {
-	grid-column: 6;
-	grid-row: 1;
-	place-self: start center;
-	
-    transform: scale(0.9);
-    opacity: 0.7;
+    transform: scale(0.9) translateX(400px);
+	z-index: 0;
 }
 
 .best-sellers .carousel-container .product-list .product-item img {
@@ -253,12 +245,11 @@ header nav .nav-links img {
 }
 
 /* Carousel Buttons */
-.carousel-button-right {
+.best-sellers .carousel-container .carousel-button.right {
 	grid-column: 5;
 	place-self: center center;
 	
 	width: 40px;
-	height: 40px;
     background: none;
     border: none;
     font-size: 30px;
@@ -267,21 +258,13 @@ header nav .nav-links img {
     padding: 10px;
 }
 
-.carousel-button.left {
-    left: -40px;
-}
-
-.carousel-button.right {
-    right: -40px;
-}
-
-.carousel-button:hover {
+.best-sellers .carousel-container .carousel-button:hover {
     color: #4CAF50;
 }
 
 /* Footer */
 footer {
-	grid-row: 6;
+	grid-row: 4;
     background: black;
     color: white;
     text-align: center;
