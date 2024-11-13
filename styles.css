@@ -241,3 +241,101 @@ footer {
     bottom: 0;
     left: 0;
 }
+
+/* Add this at the bottom of your existing styles.css file */
+
+/* Login and Signup Section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4e73df, #1d2a6d);
+}
+
+.auth-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.auth-box {
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-box h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.auth-box input:focus {
+    border-color: #4e73df;
+}
+
+.auth-btn {
+    background-color: #4e73df;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #375a8c;
+}
+
+.auth-box p {
+    font-size: 14px;
+    color: #777;
+}
+
+.auth-box a {
+    color: #4e73df;
+    text-decoration: none;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle form visibility */
+.signup-box {
+    display: none;
+}
+
+.auth-container .toggle-form {
+    color: #4e73df;
+    cursor: pointer;
+}
+
+.auth-container .login-box.active {
+    display: block;
+}
+
+.auth-container .signup-box.active {
+    display: block;
+}
