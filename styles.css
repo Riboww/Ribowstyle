@@ -6,9 +6,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    background: white;
+    min-width: min-content;
+    min-height: 100vh;
+}
+
 body {
     color: #ffffff;
-    background: linear-gradient(135deg, #ffffff 0%, #333333 100%);
+    background: linear-gradient(135deg, #ffffff, #333333);
+    background-attachment: local;
     min-width: min-content;
     min-height: 100vh;
 	
