@@ -43,7 +43,9 @@ header nav {
 header nav .logo {
 	grid-column: 1;
 	place-self: center start;
+}
 
+header nav .logo img {
     width: 75%;
     height: 75%;
     border-radius: 50%;
@@ -53,6 +55,10 @@ header nav .site-name {
 	grid-column: 2;
 	place-self: center start;
 	
+	text-decoration: none;
+}
+
+header nav .site-name h1 {
     color: white;
     font-size: 30px;
     font-weight: 700;
