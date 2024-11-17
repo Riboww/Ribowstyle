@@ -75,7 +75,7 @@ header nav .search-bar {
     grid-template-columns: 1fr 50px;
     grid-template-rows: 100%;
 	
-	outline: 1.5px solid white;
+	outline: 1.5px solid #EFEFEF;
 	border-radius: 15px;
 	overflow: hidden;
 }
@@ -158,120 +158,20 @@ header nav .nav-links img:hover {
 .main-navigation ul li a:hover {
     color: #4CAF50;
 }
-/* Product Carousel Section */
-.best-sellers {
+
+.product {
 	grid-row: 3;
 	place-self: start stretch;
-	
-    padding: 40px 20px;
-    text-align: center;
-	
-	display: grid;
-}
 
-.best-sellers h1 {
-    color: #000000;
-    font-size: 48px;
-    margin-bottom: 60px;
-}
-
-/* Product Carousel Section */
-.best-sellers .carousel-container {
-	place-self: start center;
-	
-    display: grid;
-    grid-template-columns: 40px 40px min-content 40px 40px;
-    grid-template-rows: auto;
-}
-
-.best-sellers .carousel-container .carousel-button {
-	place-self: center center;
-	
-	width: 40px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.best-sellers .carousel-container .carousel-button:hover {
-    color: #4CAF50;
-}
-
-.best-sellers .carousel-container .carousel-button.left {
-	grid-column: 1;
-}
-
-.best-sellers .carousel-container .product-list {
-	grid-column: 3;
-	place-self: stretch stretch;
-	
-    display: grid;
-    grid-template-columns: 950px;
-    grid-template-rows: auto;
-}
-
-.best-sellers .carousel-container .product-list .product-item {
-	grid-column: 1;
-	grid-row: 1;
-	place-self: center center;
-	
-    width: 350px;
-    background: white;
-	color: black;
-    padding: 20px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-}
-
-.best-sellers .carousel-container .product-list .product-item p {
-	margin: 10px;
-}
-
-.best-sellers .carousel-container .product-list .product-item.left {
-    transform: scale(0.75) translateX(-450px);
-	z-index: 0;
-}
-
-.best-sellers .carousel-container .product-list .product-item.center {
-    transform: scale(1);
-	z-index: 1;
-}
-
-.best-sellers .carousel-container .product-list .product-item.right {
-    transform: scale(0.75) translateX(450px);
-	z-index: 0;
-}
-
-.best-sellers .carousel-container .product-list .product-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+	/* Dummy example values */
+	--name: "Starboy leather jacket";
+	--price: "$29.99";
+	/* change img src */
+	--color: black;
+	--size: "S";
 }
 
 
-.best-sellers .carousel-container .product-list .add-to-cart {
-    background: #4CAF50;
-    margin-bottom: 10px;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.best-sellers .carousel-container .product-list .add-to-cart:hover {
-    background: #45a049;
-}
-
-.best-sellers .carousel-container .carousel-button.right {
-	grid-column: 5;
-}
 
 /* Footer */
 footer {
