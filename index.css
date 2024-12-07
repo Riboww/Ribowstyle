@@ -161,6 +161,7 @@ header nav .nav-links img:hover {
 /* Product Carousel Section */
 .best-sellers {
 	grid-row: 3;
+	grid-column: 1;
 	place-self: start stretch;
 	
     padding: 40px 20px;
@@ -272,6 +273,101 @@ header nav .nav-links img:hover {
 .best-sellers .carousel-container .carousel-button.right {
 	grid-column: 5;
 }
+
+.contact {
+	grid-row: 3;
+	grid-column: 1;
+	place-self: start stretch;
+	
+    padding: 40px 20px;
+    text-align: center;
+	font-size: 24px;
+	color: black;
+	
+	/*display: grid;*/
+	display: none;
+    grid-template-columns: 1fr min-content min-content 1fr;
+    grid-template-rows: min-content min-content;
+    text-align: justify;
+}
+
+.contact h1 {
+	grid-column: 2 / 4;
+	grid-row: 1;
+	place-self: start center;
+	
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.contact .links {
+	grid-column: 2;
+	grid-row: 2;
+	place-self: start stretch;
+	
+	width: max-content;
+	height: max-content;
+	border: none;
+	margin: 24px 48px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.contact .links div {
+	display: inline;
+	margin: 4px 0px;
+}
+
+.contact .links div img {
+	width: 24px;
+	height: 24px;
+}
+
+.contact .links div p {
+	display: inline;
+}
+
+.contact .links div a {
+	color: black;
+}
+
+.contact .links div .name {
+	font-weight: bold;
+}
+
+.contact .map {
+	grid-column: 3;
+	grid-row: 2;
+	place-self: start stretch;
+	
+	width: 600px;
+	height: 600px;
+	border: none;
+	margin: none;
+}
+
+.about-us {
+	grid-row: 3;
+	grid-column: 1;
+	place-self: start stretch;
+	
+    padding: 40px 20px;
+    text-align: center;
+	font-size: 24px;
+	color: black;
+	
+	/*display: grid;*/
+	display: none;
+    grid-template-columns: 1fr min(80%, 1000px) 1fr;
+    grid-template-rows: auto;
+    text-align: justify;
+}
+
+.about-us p {
+	grid-column: 2;
+}
+
 
 /* Footer */
 footer {
