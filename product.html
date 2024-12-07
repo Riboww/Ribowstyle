@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Ribowstyle clothing shop">
-	<meta name="keywords" content="Ribowstyle, clothing, shop, Riboww, Ribow, style">
-	<meta name="author" content="Riboww Ltd.">
+    <meta name="description" content="Ribowstyle clothing shop">
+    <meta name="keywords" content="Ribowstyle, clothing, shop, Riboww, Ribow, style">
+    <meta name="author" content="Riboww Ltd.">
     <title>About us</title>
-    <link rel="stylesheet" href="about_us.css">
-	<link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,10 +17,10 @@
     <header>
         <nav>
             <a class="logo" href="index.html">
-				<img src="images/logo.png" alt="Ribowstyle">
+                <img src="images/logo.png" alt="Ribowstyle">
             </a>
             <a class="site-name" href="index.html">
-				<h1>Ribowstyle</h1>
+                <h1>Ribowstyle</h1>
             </a>
             <div class="search-bar">
                 <input type="text" placeholder="Search for products..." class="search-input">
@@ -38,8 +38,8 @@
             </div>
         </nav>
     </header>
-	
-	<!-- Main Navigation for Best Sellers -->
+    
+    <!-- Main Navigation for Best Sellers -->
     <section class="main-navigation">
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -49,9 +49,81 @@
             <li><a href="#qa">Q&A</a></li>
         </ul>
     </section>
-	
-    <!-- Product Carousel Section -->
+    
+     <!-- Product template -->
+    <section class="product" id="product-template" style="display: none;"> <!-- JS: Remove ID and change style to grid -->
+        <div class="images-container">
+            <img src="" class="current-image" alt=""> <!-- JS: Change current image -->
+            <div class="image-selector"> <!-- JS: Add images here -->
+                <button class="image-button">
+                    <img src="" alt=""> <!-- JS: Change image -->
+                </button>
+            </div>
+        </div>
+        <div class="product-info">
+            <h2 class="product-name"></h2> <!-- JS: Change product name -->
+            <p class="price"></p> <!-- JS: Change price -->
+            <h3>Color</h3>
+            <div class="colors-container"> <!-- JS: Add colors here; Change checked button -->
+                <input type="checkbox" id="color-button-0" style="background-color: black"></input> <!-- JS: Change ID and background color -->
+            </div>
+            <h3>Size</h3>
+            <div class="sizes-container"> <!-- JS: Add sizes here; Change checked button -->
+                <div class="size-button">
+                    <input type="checkbox"></input>
+                    <p></p> <!-- JS: Change size -->
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <p>Add to cart</p>
+            </button>s
+        </div>
+    </section>
+    
+     <!-- Example product -->
     <section class="product">
+        <div class="images-container">
+            <img src="images/cap1.jpg" class="current-image" alt="Cap #1">
+            <div class="image-selector">
+                <button class="image-button">
+                    <img src="images/cap1.jpg" alt="Cap #1">
+                </button>
+                <button class="image-button">
+                    <img src="images/cap2.jpg" alt="Cap #2">
+                </button>
+                <button class="image-button">
+                    <img src="images/cap3.jpg" alt="Cap #3">
+                </button>
+            </div>
+        </div>
+        <div class="product-info">
+            <h2 class="product-name">Ribowstyle Cap</h2>
+            <p class="price">$19.99</p>
+            <h3>Color</h3>
+            <div class="colors-container">
+                <input type="checkbox" id="color-button-0" style="background-color: black"></input>
+                <input type="checkbox" id="color-button-1" style="background-color: blue"></input>
+                <input type="checkbox" id="color-button-2" style="background-color: saddlebrown"></input>
+            </div>
+            <h3>Size</h3>
+            <div class="sizes-container">
+                <div class="size-button">
+                    <input type="checkbox"></input>
+                    <p>10</p>
+                </div>
+                <div class="size-button">
+                    <input type="checkbox"></input>
+                    <p>11</p>
+                </div>
+                <div class="size-button">
+                    <input type="checkbox"></input>
+                    <p>12</p>
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <p>Add to cart</p>
+            </button>
+        </div>
     </section>
 
     <!-- Footer -->
