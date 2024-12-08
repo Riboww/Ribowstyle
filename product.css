@@ -162,13 +162,9 @@ header nav .nav-links img:hover {
 .product {
     grid-row: 3;
     place-self: start stretch;
-
-    /* Dummy example values */
-    --name: "Starboy leather jacket";
-    --price: "$29.99";
     
     display: grid;
-    grid-template-columns: 1fr min-content 600px 1fr;
+    grid-template-columns: 1fr 400px 600px 1fr;
     grid-template-rows: 80px auto;
 }
 
@@ -176,8 +172,6 @@ header nav .nav-links img:hover {
     grid-column: 2;
     grid-row: 2;
     place-self: start stretch;
-
-    width: 400px;
     
     display: flex;
     flex-direction: column;
@@ -240,7 +234,7 @@ header nav .nav-links img:hover {
 }
 
 .product .product-info .colors-container input:checked {
-    border: 4px solid white;
+    border: 3px solid white;
 }
 
 .product .product-info .sizes-container {
@@ -266,7 +260,7 @@ header nav .nav-links img:hover {
 }
 
 .product .product-info .sizes-container .size-button input:checked {
-    border: 4px solid white;
+    border: 3px solid white;
 }
 
 .product .product-info .sizes-container .size-button p {
