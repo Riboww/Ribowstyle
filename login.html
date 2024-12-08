@@ -3,33 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="login.css">
-	<link rel="shortcut icon" href="images/favicon.ico">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="Ribowstyle clothing shop">
+    <meta name="keywords" content="Ribowstyle, clothing, shop, Riboww, Ribow, style">
+    <meta name="author" content="Riboww Ltd.">
+    <title>Ribowstyle</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <form action="index.html" method="get">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="username" required>
-                <i class='bx bxs-user'></i>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Ribowstyle">
+            </a>
+            <a class="site-name" href="index.html">
+                <h1>Ribowstyle</h1>
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products..." class="search-input">
+                <button class="search-button">
+                    <img src="images/search.svg" alt="Search">
+                </button>
             </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt'></i>
+            <div class="nav-links">
+                <img class="cart" src="images/cart.svg" alt="Cart">
+                <img class="language" src="images/globe.svg" alt="Language">
+                <!-- Update the profile image link in your main page -->
+                <a href="login.html">
+                    <img class="profile" src="images/user.svg" alt="Profile">
+                </a>
             </div>
-            <div class="remember-forget">
-                <label ><input type="checkbox">
-                Remember me</label>
-                <a href="#"> Forgot Password?</a>
+        </nav>
+    </header>
+    
+    <!-- Main Navigation for Best Sellers -->
+    <section class="main-navigation">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="#site">SITE</a></li>
+            <li><a href="#qa">Q&A</a></li>
+        </ul>
+    </section>
+    
+    <!-- Product Carousel Section -->
+    <section class="best-sellers">
+        <h1>Best Sellers</h1>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="previousProduct()">&#10094;</button>
+
+            <div class="product-list">
+                <!-- Product Item 1 -->
+                <div class="product-item small">
+                    <img src="images/cap1.jpg" alt="Cap">
+                    <h3>Cap</h3>
+                    <p>$19.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Product Item 2 - Highlighted -->
+                <div class="product-item large">
+                    <img src="images/jacket1.jpg" alt="Starboy jacket">
+                    <h3>Starboy jacket</h3>
+                    <p>$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Product Item 3 -->
+                <div class="product-item small">
+                    <img src="images/glasses_blue.jpg" alt="Glasses">
+                    <h3>Glasses</h3>
+                    <p>$39.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <button type="submit" class="btn">Log in</button>
-            <div class="register-link">
-                <p>Don't have a account?  <a href="#">Register</a></p>
+
+            <button class="carousel-button right" onclick="nextProduct()">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="about-us">
+        <p>
+            Từ một nhóm học sinh chỉ có 6 thành viên nhưng với sự cần cù, 
+            quyết tâm không ngại gian khó, và luôn tự cải tiến để dần hoàn thiện, 
+            Ribowstyle đã dần đi vào hoạt động và khẳng định vị thế của mình.<br>
+            <br>
+            Hơn nhiều tuần trôi qua, Ribowstyle đã đổi mới và cải thiện không ngừng,
+            cập nhật nhiều mẫu mã đa dạng và phù hợp cho các tầng lớp người Việt Nam.
+            Từ những miếng da bò thô kệch, những miếng sắt đã qua tái chế,
+            qua đôi tay gia công của những thợ lành nghề Việt Nam đã thành
+            những tác phẩm nghệ thuật được treo trên kệ bán áo của chúng tôi.
+            Mặc cho thị trường biến động, Ribowstyle vẫn ngày ngày thích nghi
+            để phục vụ quý khách những chiếc áo, cặp kính chất lượng bậc nhất thị trường.
+        </p>
+    </section>
+    
+    <section class="contact">
+        <h1>Contact us</h1>
+        <div class="links">
+            <div class="company">
+                <img src="images/house.svg" alt="Company">
+                <p class="name">Company: </p>
+                <p>Riboww Limited</p>
             </div>
-        </form>
-    </div>
+            <div class="location">
+                <img src="images/location_pin.svg" alt="Location">
+                <p class="name">Location: </p>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.google.com/maps?ll=10.793331,106.654949&z=18&t=m&hl=en-US&gl=US&q=649+%C4%90.+Ho%C3%A0ng+V%C4%83n+Th%E1%BB%A5+Ph%C6%B0%E1%BB%9Dng+4+T%C3%A2n+B%C3%ACnh+H%E1%BB%93+Ch%C3%AD+Minh"
+                >649 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh</a>
+            </div>
+            <div class="email">
+                <img src="images/mail.svg" alt="Email">
+                <p class="name">Email: </p>
+                <a href="mailto:contact@ribowstyle.shop">contact@ribowstyle.shop</a>
+            </div>
+            <div class="phone">
+                <img src="images/phone.svg" alt="Phone number">
+                <p class="name">Phone number: </p>
+                <a href="tel:+84987654321">0987654321</a>
+            </div>
+        </div>
+        <iframe class="map" src="https://maps.google.com/maps?amp;hl=en&amp;q=649%20Ho%C3%A0ng%20V%C4%83n%20Th%E1%BB%A5,%20Ph%C6%B0%E1%BB%9Dng%204,%20Qu%E1%BA%ADn%20T%C3%A2n%20B%C3%ACnh,%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh+(Ribowstyle)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </section>
+    <!-- Product Grid Section -->
+    <section class="product-grid">
+        <h1>Shop Our Collection</h1>
+        <div class="product-grid-container">
+            <div class="product-card">
+                <img src="images/shirt1.jpg" alt="Shirt">
+                <h3>Casual Shirt</h3>
+                <p>$25.00</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/pants1.jpg" alt="Pants">
+                <h3>Classic Pants</h3>
+                <p>$30.00</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/shoes1.jpg" alt="Shoes">
+                <h3>Running Shoes</h3>
+                <p>$50.00</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Riboww Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

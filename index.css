@@ -368,16 +368,169 @@ header nav .nav-links img:hover {
 	grid-column: 2;
 }
 
+.product-grid {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.product-grid-container {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #000000;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #000000;
+    font-size: 16px;
+}
+
+.product-card .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #45a049;
+}
 
 /* Footer */
 footer {
-	grid-row: 4;
     background: black;
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 14px;
-	width: 100%;
+    width: 100%;
     bottom: 0;
     left: 0;
+}
+
+
+
+/* Cart Items Section */
+.cart-items {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cart-items h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cart-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.cart-item-name {
+    margin: 0 20px;
+    flex: 1;
+    color: #000000;
+}
+
+.cart-item-price {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.remove-from-cart {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.remove-from-cart:hover {
+    background-color: #e14c2f;
+}
+
+/* Cart notification style */
+.cart-notification {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;  /* Ensure it covers full width */
+    bottom: 0;  /* Ensure it covers full height */
+    background-color: rgba(0, 0, 0, 0.333); /* Slight transparency to allow background blur */
+    color: white;
+    padding: 20px;  /* Adjust padding around the box */
+    border-radius: 10px;
+    font-size: 30px; /* Font size for text */
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    backdrop-filter: blur(10px); /* Adds background blur effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cart-notification::before {
+    content: '\2714'; /* Unicode for checkmark symbol */
+    font-size: 50px; /* Size of the tick */
+    font-weight: bold;
+    margin-right: 0; /* No spacing between tick and text */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }

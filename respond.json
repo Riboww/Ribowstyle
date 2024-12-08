@@ -1,0 +1,18 @@
+{
+    "cap1": {
+        "name": "Ribowstyle Cap",
+        "description": "A stylish cap for all occasions.",
+        "price": "$19.99",
+        "images": ["images/cap1.jpg", "images/cap2.jpg", "images/cap3.jpg"],
+        "colors": ["black", "blue", "saddlebrown"],
+        "sizes": ["10", "11", "12"]
+    },
+    "shirt1": {
+        "name": "Casual Shirt",
+        "description": "Comfortable casual shirt for every day.",
+        "price": "$25.00",
+        "images": ["images/jacket1.jpg", "images/jacket2.jpg"],
+        "colors": ["red", "white", "navy"],
+        "sizes": ["M", "L", "XL"]
+    }
+}

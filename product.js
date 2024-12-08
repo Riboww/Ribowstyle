@@ -37,36 +37,7 @@ function loadCartCount() {
     document.querySelector('.cart-count').innerText = cartCount;
 }
 // JavaScript function to show a pop-up when an item is added to the cart
-function addToCart(event) {
-    // Get the product details from the DOM
-    const productItem = event.target.closest('.product-item, .product-card');
-    const productName = productItem.querySelector('h3').innerText;
-    const productPrice = productItem.querySelector('p').innerText;
-    const productImage = productItem.querySelector('img').src;
-
-    // Create product object
-    const product = { name: productName, price: productPrice, image: productImage };
-
-    // Retrieve current cart items from localStorage
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-    // Check if the product already exists in the cart
-    const existingProductIndex = cartItems.findIndex(item => item.name === productName);
-    
-    if (existingProductIndex === -1) {
-        // If the product is not in the cart, add it
-        cartItems.push(product);
-    } else {
-        // If the product already exists, update it (optional: add quantity, etc.)
-        // Example: You could increase quantity here, if desired
-        cartItems[existingProductIndex].quantity = (cartItems[existingProductIndex].quantity || 1) + 1;
-    }
-
-    // Save updated cart items back to localStorage
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-    // Update cart count
-    updateCartCount();
+function addToCart() {
     // Show the notification
     const notification = document.createElement('div');
     notification.classList.add('cart-notification');

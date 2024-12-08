@@ -30,6 +30,7 @@
             </div>
             <div class="nav-links">
                 <img class="cart" src="images/cart.svg" alt="Cart">
+                <span class="cart-count" aria-label="Items in cart">0</span>
                 <img class="language" src="images/globe.svg" alt="Language">
                 <!-- Update the profile image link in your main page -->
                 <a href="login.html">
@@ -120,9 +121,7 @@
                     <p>12</p>
                 </div>
             </div>
-            <button class="add-to-cart">
-                <p>Add to cart</p>
-            </button>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
         </div>
     </section>
 
@@ -130,6 +129,7 @@
     <footer>
         <p>&copy; 2024 Riboww Ltd. All rights reserved.</p>
     </footer>
+
+    <script src="product.js"></script>
 </body>
 </html>
-
