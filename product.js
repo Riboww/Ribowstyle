@@ -1,36 +1,3 @@
-let currentIndex = 0;
-const products = document.querySelectorAll(".product-item");
-
-function updateCarousel() {
-    const totalProducts = products.length;
-    products.forEach((product, index) => {
-        product.classList.remove("left", "center", "right");
-
-        // Calculate new positions
-        if (index === currentIndex) {
-            product.classList.add("center");
-        } else if (index === (currentIndex + 1) % totalProducts) {
-            product.classList.add("right");
-        } else if (index === (currentIndex - 1 + totalProducts) % totalProducts) {
-            product.classList.add("left");
-        } else {
-            product.classList.add("hide");
-        }
-    });
-}
-
-function previousProduct() {
-    currentIndex = (currentIndex - 1 + products.length) % products.length;
-    updateCarousel();
-}
-
-function nextProduct() {
-    currentIndex = (currentIndex + 1) % products.length;
-    updateCarousel();
-}
-
-// File: index.js
-
 // Function to load cart count on page load
 function loadCartCount() {
     const cartCount = localStorage.getItem('cartCount') || 0;
@@ -75,9 +42,41 @@ document.querySelector('.cart').addEventListener('click', () => {
 // Load the initial cart count when the page loads
 loadCartCount();
 
-    
 
-// Auto-rotate every 5 seconds
-setInterval(nextProduct, 5000);
+products = {
+	"products" : [
+		{
+			"name": "Cap",
+			"price": "$19.99",
+			"image": ["cap1.jpg", "cap2.jpg", "cap3.jpg"],
+			"color" : ["black", "blue", "saddlebrown"],
+			"size": ["10", "11", "12"],
+		},
+		{
+			"name": "Glasses",
+			"price": "$39.99",
+			"image": ["glasses_blue.jpg", "glasses_orange.jpg", "glasses_purple.jpg"],
+			"color" : ["cornflowerblue", "darksalmon", "purple"],
+			"size": ["S", "M", "XL"]
+		},
+		{
+			"name": "Starboy leather jacket",
+			"price": "$29.99",
+			"image": ["jacket1.jpg", "jacket2.jpg", "jacket3.jpg"],
+			"color" : ["black", "blue", "saddlebrown"],
+			"size": ["S", "M", "XL"]
+		}
+	]
+};
 
-updateCarousel(); // Initial setup
+//
+
+let product_template_node = document.getElementsByClassName("product")[0];
+
+let product_node = product_template_node.cloneNode(true);
+product_template_node.after(product_node);
+product_template_node.remove();
+
+let product = products.products[0];
+let current_image_node = product_node.getElementsByClassName('images-container')[0].getElementsByClassName('current-image')[0];
+current_image_node.src = 'images/' + product.image[0];

@@ -30,6 +30,7 @@
             </div>
             <div class="nav-links">
                 <img class="cart" src="images/cart.svg" alt="Cart">
+                <span class="cart-count" aria-label="Items in cart">0</span>
                 <img class="language" src="images/globe.svg" alt="Language">
                 <!-- Update the profile image link in your main page -->
                 <a href="login.html">
@@ -43,10 +44,10 @@
     <section class="main-navigation">
         <ul>
             <li><a href="index.html">HOME</a></li>
+            <li><a href="product_list.html">PRODUCTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about_us.html">ABOUT US</a></li>
-            <li><a href="#site">SITE</a></li>
-            <li><a href="#qa">Q&A</a></li>
+            <li><a href="question_answer.html">Q&A</a></li>
         </ul>
     </section>
 	
@@ -57,21 +58,21 @@
             <img src="images/cap1.jpg" alt="Cap">
             <h3>Cap</h3>
             <p>$19.99</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
         </div>
         <!-- Product Item 2 - Highlighted -->
         <div class="product-item">
             <img src="images/jacket1.jpg" alt="Starboy jacket">
             <h3>Starboy jacket</h3>
             <p>$29.99</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
         </div>
         <!-- Product Item 3 -->
         <div class="product-item">
             <img src="images/glasses_blue.jpg" alt="Glasses">
             <h3>Glasses</h3>
             <p>$39.99</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
         </div>
     </section>
 
@@ -79,6 +80,8 @@
     <footer>
         <p>&copy; 2024 Riboww Ltd. All rights reserved.</p>
     </footer>
+	
+    <script src="add_to_cart.js"></script>
 </body>
 </html>
 

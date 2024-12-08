@@ -368,60 +368,6 @@ header nav .nav-links img:hover {
 	grid-column: 2;
 }
 
-.product-grid {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.product-grid h1 {
-    color: #ffffff;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.product-grid-container {
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.product-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.product-card h3 {
-    color: #000000;
-    margin: 10px 0;
-}
-
-.product-card p {
-    color: #000000;
-    font-size: 16px;
-}
-
-.product-card .add-to-cart {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.product-card .add-to-cart:hover {
-    background-color: #45a049;
-}
-
 /* Footer */
 footer {
     background: black;
@@ -433,8 +379,6 @@ footer {
     bottom: 0;
     left: 0;
 }
-
-
 
 /* Cart Items Section */
 .cart-items {
