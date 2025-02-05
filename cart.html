@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ribowstyle - Cart</title>
+    <meta name="description" content="Hãng thời trang Ribowstyle">
+    <meta name="keywords" content="Ribowstyle, Riboww, Ribow, clothing, shop, style">
+    <meta name="author" content="Công ty TNHH Riboww">
+    <title>Giỏ hàng | Ribowstyle</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Navbar -->
     <header>
         <nav>
             <a class="logo" href="index.html">
@@ -17,35 +22,41 @@
             <a class="site-name" href="index.html">
                 <h1>Ribowstyle</h1>
             </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                <button class="search-button">
+                    <img src="images/search.svg" alt="Tìm kiếm">
+                </button>
+            </div>
             <div class="nav-links">
-                <img class="cart" src="images/cart.svg" alt="Cart">
+                <img class="cart" src="images/cart.svg" alt="Giỏ hàng">
                 <span class="cart-count" aria-label="Items in cart">0</span>
+                <img class="language" src="images/globe.svg" alt="Ngôn ngữ">
                 <a href="login.html">
-                    <img class="profile" src="images/user.svg" alt="Profile">
+                    <img class="profile" src="images/user.svg" alt="Tài khoản">
                 </a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Navigation for Best Sellers -->
     <section class="main-navigation">
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="product_list.html">PRODUCTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="about_us.html">ABOUT US</a></li>
-            <li><a href="question_answer.html">Q&A</a></li>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="product_list.html">SẢN PHẨM</a></li>
+            <li><a href="contact.html">LIÊN LẠC</a></li>
+            <li><a href="about_us.html">VỀ CHÚNG TÔI</a></li>
+            <li><a href="question_answer.html">HỎI & ĐÁP</a></li>
         </ul>
     </section>
     
     <!-- Cart Items Section -->
     <section class="cart-items">
-        <h1>Your Cart</h1>
+        <h1>Giỏ hàng</h1>
         <div class="cart-list"></div>
 
         <!-- Total Price -->
         <div class="cart-total">
-            <h3>Total: <span id="total-price">$0.00</span></h3>
+            <h3>Tổng: <span id="total-price">$0.00</span></h3>
         </div>
     </section>
 
