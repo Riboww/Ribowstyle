@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hãng thời trang Ribowstyle">
-    <meta name="keywords" content="Ribowstyle, Riboww, Ribow, clothing, shop, style">
-    <meta name="author" content="Công ty TNHH Riboww">
-    <title>Đăng nhập | Ribowstyle</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hãng thời trang Ribowstyle">
+  <meta name="keywords" content="Ribowstyle, Riboww, Ribow, clothing, shop, style">
+  <meta name="author" content="Công ty TNHH Riboww">
+  <title>Đăng nhập | Ribowstyle</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- Load the Google reCAPTCHA API -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    // This function is called when reCAPTCHA validation is successful.
+    function onSubmit(token) {
+      document.getElementById("login-form").submit();
+    }
+  </script>
 </head>
 <body>
-    <div class="wrapper">
-        <form action="index.html" method="get">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Tên đăng nhập" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Mật khẩu" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            <div class="remember-forget">
-                <label ><input type="checkbox">Ghi nhớ</label>
-                <a href="#">Quên mật khẩu</a>
-            </div>
-            <button type="submit" class="btn">Đăng nhập</button>
-            <div class="register-link">
-                <p>Chưa có tài khoản?   <a href="#">Đăng ký</a></p>
-            </div>
-        </form>
-    </div>
+  <div class="wrapper">
+    <form id="login-form" action="index.html" method="get">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Tên đăng nhập" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Mật khẩu" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forget">
+        <label>
+          <input type="checkbox">Ghi nhớ
+        </label>
+        <a href="#">Quên mật khẩu</a>
+      </div>
+      <!-- The submit button now integrates Invisible reCAPTCHA -->
+      <button type="submit"
+              class="btn g-recaptcha"
+              data-sitekey="YOUR_SITE_KEY"
+              data-callback="onSubmit"
+              data-action="submit">
+        Đăng nhập
+      </button>
+      <div class="register-link">
+        <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
