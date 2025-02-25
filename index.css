@@ -21,12 +21,12 @@ body {
 	
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content min-content 1fr min-content;
-	row-gap: 20px;
+    grid-template-rows: min-content min-content min-content 1fr min-content;
 }
 
 header {
 	grid-row: 1;
+
     background: #101010;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -128,12 +128,39 @@ header nav .nav-links img:hover {
 	filter: invert(56%) sepia(68%) saturate(367%) hue-rotate(73deg) brightness(90%) contrast(97%); /* #4CAF50 */
 }
 
+/* Running Banner Styles */
+.running-banner {
+	grid-row: 2;
+    
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #000000; /* Adjust background color as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.running-banner p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 10s linear infinite;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+@keyframes scroll-text {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 /* Main Navigation */
 .main-navigation {
-	grid-row: 2;
+	grid-row: 3;
 	place-self: center center;
 	
     background-color: black;
+    margin-bottom: 20px;
     padding: 10px 60px;
     border-radius: 0px;
 	max-width: min-content;
@@ -160,10 +187,11 @@ header nav .nav-links img:hover {
 }
 /* Product Carousel Section */
 .best-sellers {
-	grid-row: 3;
+	grid-row: 4;
 	grid-column: 1;
 	place-self: start stretch;
 	
+    margin-bottom: 20px;
     padding: 40px 20px;
     text-align: center;
 	
@@ -275,10 +303,11 @@ header nav .nav-links img:hover {
 }
 
 .contact {
-	grid-row: 3;
+	grid-row: 4;
 	grid-column: 1;
 	place-self: start stretch;
 	
+    margin-bottom: 20px;
     padding: 40px 20px;
     text-align: center;
 	font-size: 24px;
@@ -352,6 +381,7 @@ header nav .nav-links img:hover {
 	grid-column: 1;
 	place-self: start stretch;
 	
+    margin-bottom: 20px;
     padding: 40px 20px;
     text-align: center;
 	font-size: 24px;
@@ -478,27 +508,3 @@ footer {
         opacity: 1;
     }
 }
-
-
- /* Running Banner Styles */
-    .running-banner {
-      width: 100%;
-      background-color: #ffeb3b; /* Adjust background color as needed */
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
-    .running-banner p {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-text 10s linear infinite;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #000;
-      margin: 0;
-    }
-    @keyframes scroll-text {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
