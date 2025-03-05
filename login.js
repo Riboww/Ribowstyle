@@ -3,11 +3,28 @@ const storedToken = localStorage.getItem('accessToken');
 if (storedToken) {
     document.getElementById('login-form').style.display = 'none';
     
-	let user_info_element = document.getElementById('user-info');
+    let user_info_element = document.getElementById('user-info');
     const username = localStorage.getItem('username');
-    user_info_element.getElementsByClassName('username')[0].innerHTML = 'Logged in to <b>' + username;
+    user_info_element.getElementsByClassName('username')[0].innerHTML = 'Đã đăng nhập vào <b>' + username;
     user_info_element.style.display = 'initial';
 }
+
+document.querySelectorAll('.show-password').forEach(button => {
+    button.addEventListener('click', function () {
+        // Find the associated password input field
+        const passwordInput = this.parentElement.querySelector('input[type="password"], input[type="text"]');
+        const icon = this.querySelector('i'); // The icon inside the button
+        
+        // Toggle the input type between 'password' and 'text'
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.replace('bxs-show', 'bxs-hide'); // Change icon to 'bxs-hide'
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.replace('bxs-hide', 'bxs-show'); // Change icon back to 'bxs-show'
+        }
+    });
+});
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -15,10 +32,15 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     document.getElementById('message').textContent = '';
     let formData = new FormData(this);
     
+    let loginButton = document.getElementById('login-button');
+    loginButton.textContent = 'Đang đăng nhập ...';
+    loginButton.disabled = true;
+    
+    let username = formData.get('username');
     fetch('login.php', {
         method: 'POST',
         body: JSON.stringify({
-            username: formData.get('username'),
+            username: username,
             password: formData.get('password')
         })
     })
@@ -26,14 +48,21 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     .then(data => {
         if (data.success) {
             localStorage.setItem('accessToken', data.token);
-            localStorage.setItem('username', formData.get('username'));
+            localStorage.setItem('username', username);
             window.location.href = 'index.html';
         } else {
-            document.getElementById('message').textContent = "Error: " + data.message;
+            if (data.needVerify) {
+                const params = new URLSearchParams();
+                params.append('username', username);
+                window.location.href = 'login_verify.html?' + params.toString();
+            }
+            document.getElementById('message').textContent = "Lỗi: " + data.message;
         }
+        loginButton.disabled = false
+        loginButton.textContent = 'Đăng nhập';
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.error('Lỗi:', error);
     });
 });
 
@@ -54,10 +83,10 @@ document.getElementById('logout-button').addEventListener('click', function() {
         if (data.success) {
             window.location.href = 'index.html';
         } else {
-            document.getElementById('message').textContent = "Error: " + data.message;
+            document.getElementById('message').textContent = "Lỗi: " + data.message;
         }
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.error('Lỗi:', error);
     });
 });

@@ -17,22 +17,25 @@
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" name="password" placeholder="Mật khẩu" required>
+                <input id="password" type="password" name="password" placeholder="Mật khẩu" required>
                 <i class='bx bxs-lock-alt'></i>
+                <button class="show-password" type="button">
+                    <i class="bx bxs-show"></i>
+                </button>
             </div>
             <div class="remember-forget">
                 <label ><input type="checkbox">
                 Nhớ tài khoản</label>
                 <a href="#"> Quên mật khẩu?</a>
             </div>
-            <button type="submit" class="btn">Đăng nhập</button>
+            <button type="submit" class="btn" id="login-button">Đăng nhập</button>
             <div class="register-link">
                 <p>Chưa có tài khoản?  <a href="login_register.html">Đăng ký</a></p>
             </div>
         </form>
         <div id="user-info" style="display: none">
             <p class="username"></p>
-            <button id="logout-button" class="btn">Đăng xuất</button>
+            <button type="button" class="btn" id="logout-button">Đăng xuất</button>
         </div>
         <p id="message"></p>
     </div>

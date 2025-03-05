@@ -70,6 +70,20 @@ body{
     color: #fff;
 }
 
+.input-box .show-password {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    outline: none;
+}
+        
+
 .wrapper .remember-forget{
     display: flex;
     justify-content: space-between;
@@ -88,7 +102,6 @@ body{
 }
 
 .remember-forget a:hover{
-
     text-decoration: underline;
 
 }
@@ -104,10 +117,16 @@ body{
     cursor: pointer;
     font-size: 16px;
     color: #333;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .wrapper .btn:hover{
+    background: rgba(83,73,73,0.5);
+    color: white;
+    border-color: #fff;
+}
+
+.wrapper .btn:disabled{
     background: rgba(83,73,73,0.5);
     color: white;
     border-color: #fff;
@@ -129,6 +148,19 @@ body{
     text-decoration: underline;
 }
 
-#user-info .username{
-    margin-bottom: 12px;
+.g-recaptcha {
+    width: min-content;
+    margin: 30px auto;
+}
+
+#message {
+    margin-top: 30px;
+}
+
+#resend-button {
+    margin-top: 30px;
+}
+
+#user-info .username {
+    margin-bottom: 30px;
 }

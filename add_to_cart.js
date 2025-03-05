@@ -37,7 +37,7 @@ function addToCart(event) {
     // Show the notification
     const notification = document.createElement('div');
     notification.classList.add('cart-notification');
-    notification.innerHTML = 'Item added to cart!';
+    notification.innerHTML = 'Đã thêm mặt hàng vào giỏ!';
     
     // Append the notification to the body
     document.body.appendChild(notification);
