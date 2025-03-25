@@ -1,7 +1,7 @@
 {
-    "name": "Áo khoác da Starboy",
+    "name": "Áo khoác",
     "price": "$29.99",
-    "image": ["jacket1.jpg", "jacket2.jpg", "jacket3.jpg"],
+    "image": ["blazer1.jpg", "blazer2.jpg"],
 	"color" : ["black", "blue", "saddlebrown"],
 	"size": ["S", "M", "XL"]
 }

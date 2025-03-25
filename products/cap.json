@@ -1,7 +1,7 @@
 {
-    "name": "Cap",
+    "name": "Mũ lưỡi trai",
     "price": "$19.99",
-    "image": ["cap1.jpg", "cap2.jpg", "cap3.jpg"]
-	"color" : ["black", "blue", "saddlebrown"]
+    "image": ["cap1.jpg", "cap2.jpg", "cap3.jpg"],
+	"color" : ["black", "blue", "saddlebrown"],
 	"size": ["10", "11", "12"]
 }

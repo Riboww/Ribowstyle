@@ -1,7 +1,7 @@
 {
-    "name": "Glasses",
+    "name": "Mắt kính",
     "price": "$39.99",
-    "image": ["glasses_blue.jpg", "glasses_orange.jpg", "glasses_purple.jpg"]
-	"color" : ["cornflowerblue", "darksalmon", "purple"]
+    "image": ["glasses_blue.jpg", "glasses_orange.jpg", "glasses_purple.jpg"],
+	"color" : ["cornflowerblue", "darksalmon", "purple"],
 	"size": ["S", "M", "XL"]
 }

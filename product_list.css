@@ -208,7 +208,7 @@ header nav .nav-links img:hover {
 }
 
 
-.product-list .product-item .add-to-cart {
+.product-list .product-item .details-button {
     background: #4CAF50;
     color: white;
     border: none;

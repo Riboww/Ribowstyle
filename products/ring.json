@@ -1,0 +1,7 @@
+{
+    "name": "Nhẫn",
+    "price": "$5.99",
+    "image": ["ring.jpg"],
+	"color" : ["white"],
+	"size": ["S", "M", "XL"]
+}

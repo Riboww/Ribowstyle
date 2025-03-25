@@ -1,0 +1,7 @@
+{
+    "name": "Bông tai hoàng gia",
+    "price": "$4.99",
+    "image": ["earings2.jpg"],
+	"color" : ["white", "darksalmon"],
+	"size": ["S", "M", "XL"]
+}

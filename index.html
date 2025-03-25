@@ -11,30 +11,6 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="index.css">
-  <style>
-    /* Running Banner Styles */
-    .running-banner {
-      width: 100%;
-      background-color: #ffeb3b; /* Adjust background color as needed */
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
-    .running-banner p {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-text 10s linear infinite;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #000;
-      margin: 0;
-    }
-    @keyframes scroll-text {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-  </style>
 </head>
 <body>
 
@@ -84,46 +60,13 @@
     <div class="carousel-container">
       <button class="carousel-button left" onclick="previousProduct()">&#10094;</button>
 
-      <div class="product-list">
-        <!-- Product Item 1 -->
-        <div class="product-item small">
-          <img src="images/cap1.jpg" alt="Mũ lưỡi trai">
-          <h3>Mũ lưỡi trai</h3>
-          <p>$19.99</p>
-          <button class="add-to-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-        </div>
-        <!-- Product Item 2 - Highlighted -->
-        <div class="product-item large">
-          <img src="images/jacket1.jpg" alt="Áo khoác Starboy">
-          <h3>Áo khoác Starboy</h3>
-          <p>$29.99</p>
-          <button class="add-to-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-        </div>
-        <!-- Product Item 3 -->
-        <div class="product-item small">
-          <img src="images/glasses_blue.jpg" alt="Mắt kính">
-          <h3>Mắt kính</h3>
-          <p>$39.99</p>
-          <button class="add-to-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
+		<div class="product-list">
+			<div class="product-item" data-id="jacket"></div>
+			<div class="product-item" data-id="short"></div>
+			<div class="product-item" data-id="earings_heart"></div>
+		</div>
       <button class="carousel-button right" onclick="nextProduct()">&#10095;</button>
     </div>
-  </section>
-    
-  <section class="about-us">
-    <p>
-      Từ một nhóm học sinh chỉ có 6 thành viên nhưng với sự cần cù, 
-      quyết tâm không ngại gian khó, và luôn tự cải tiến để dần hoàn thiện, 
-      Ribowstyle đã dần đi vào hoạt động và khẳng định vị thế của mình.<br><br>
-      Hơn nhiều tuần trôi qua, Ribowstyle đã đổi mới và cải thiện không ngừng,
-      cập nhật nhiều mẫu mã đa dạng và phù hợp cho các tầng lớp người Việt Nam.
-      Từ những miếng da bò thô kệch, những miếng sắt đã qua tái chế,
-      qua đôi tay gia công của những thợ lành nghề Việt Nam đã thành
-      những tác phẩm nghệ thuật được treo trên kệ bán áo của chúng tôi.
-      Mặc cho thị trường biến động, Ribowstyle vẫn ngày ngày thích nghi
-      để phục vụ quý khách những chiếc áo, cặp kính chất lượng bậc nhất thị trường.
-    </p>
   </section>
 
   <!-- Footer -->

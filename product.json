@@ -1,0 +1,25 @@
+{
+	"products" : [
+		{
+			"name": "Cap",
+			"price": "$19.99",
+			"image": ["cap1.jpg", "cap2.jpg", "cap3.jpg"],
+			"color" : ["black", "blue", "saddlebrown"],
+			"size": ["10", "11", "12"]
+		},
+		{
+			"name": "Glasses",
+			"price": "$39.99",
+			"image": ["glasses_blue.jpg", "glasses_orange.jpg", "glasses_purple.jpg"],
+			"color" : ["cornflowerblue", "darksalmon", "purple"],
+			"size": ["S", "M", "XL"]
+		},
+		{
+			"name": "Starboy leather jacket",
+			"price": "$29.99",
+			"image": ["jacket1.jpg", "jacket2.jpg", "jacket3.jpg"],
+			"color" : ["black", "blue", "saddlebrown"],
+			"size": ["S", "M", "XL"]
+		}
+	]
+}

@@ -38,7 +38,7 @@
             </div>
         </nav>
     </header>
-
+	
     <section class="main-navigation">
         <ul>
             <li><a href="index.html">TRANG CHỦ</a></li>
@@ -50,66 +50,16 @@
     </section>
 
     <section class="product-list">
-        <div class="product-item">
-            <img src="images/cap1.jpg" alt="Mũ lưỡi trai">
-            <h3>Mũ lưỡi trai</h3>
-            <p>$19.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-        <img src="images/jacket1.jpg" alt="Áo khoác Starboy">
-            <h3>Áo khoác Starboy</h3>
-            <p>$29.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/hoodie3.jpg" alt="Hoodie">
-            <h3>Hoodie</h3>
-            <p>$29.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/blazer1.jpg" alt="Áo khoác">
-            <h3>Áo khoác</h3>
-            <p>$29.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/short1.jpg" alt="Quần bò">
-            <h3>Quần bò</h3>
-            <p>$24.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/glasses_blue.jpg" alt="Mắt kính">
-            <h3>Mắt kính</h3>
-            <p>$39.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/earings1.jpg" alt="Bông tai trái tim">
-            <h3>Bông tai trái tim</h3>
-            <p>$4.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/earings2.jpg" alt="Bông tai hoàng gia">
-            <h3>Bông tai hoàng gia</h3>
-            <p>$4.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/ring.jpg" alt="Nhẫn">
-            <h3>Nhẫn</h3>
-            <p>$5.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
-        <div class="product-item">
-            <img src="images/chain.jpg" alt="Vòng">
-            <h3>Vòng</h3>
-            <p>$10.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Thêm vảo giỏ hàng</button>
-        </div>
+        <div class="product-item" data-id="cap"></div>
+        <div class="product-item" data-id="jacket"></div>
+        <div class="product-item" data-id="hoodie"></div>
+        <div class="product-item" data-id="blazer"></div>
+        <div class="product-item" data-id="short"></div>
+        <div class="product-item" data-id="glasses"></div>
+        <div class="product-item" data-id="earings_heart"></div>
+        <div class="product-item" data-id="earings_royal"></div>
+        <div class="product-item" data-id="ring"></div>
+        <div class="product-item" data-id="chain"></div>
     </section>
 
     <!-- Footer -->
@@ -117,7 +67,8 @@
         <p>&copy; 2024 Riboww Ltd. All rights reserved.</p>
     </footer>
 	
-    <script src="add_to_cart.js"></script>
+    <script src="product_list.js"></script>
+	<script src="add_to_cart.js"></script>
 </body>
 </html>
 

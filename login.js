@@ -1,3 +1,5 @@
+let messageElement = document.getElementById('message');
+
 // Check if already logged in
 const storedToken = localStorage.getItem('accessToken');
 if (storedToken) {
@@ -29,7 +31,7 @@ document.querySelectorAll('.show-password').forEach(button => {
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    document.getElementById('message').textContent = '';
+    messageElement.textContent = '';
     let formData = new FormData(this);
     
     let loginButton = document.getElementById('login-button');
@@ -56,19 +58,20 @@ document.getElementById('login-form').addEventListener('submit', function(event)
                 params.append('username', username);
                 window.location.href = 'login_verify.html?' + params.toString();
             }
-            document.getElementById('message').textContent = "Lỗi: " + data.message;
+            messageElement.textContent = "Lỗi: " + data.message;
         }
         loginButton.disabled = false
         loginButton.textContent = 'Đăng nhập';
     })
     .catch(error => {
-        console.error('Lỗi:', error);
+        messageElement.textContent = "Lỗi: " + error;
+        loginButton.disabled = false
+        loginButton.textContent = 'Đăng nhập';
     });
 });
 
 document.getElementById('logout-button').addEventListener('click', function() {
     const token = localStorage.getItem('accessToken');
-    
     localStorage.removeItem('accessToken');
     
     fetch('logout.php', {
@@ -83,10 +86,10 @@ document.getElementById('logout-button').addEventListener('click', function() {
         if (data.success) {
             window.location.href = 'index.html';
         } else {
-            document.getElementById('message').textContent = "Lỗi: " + data.message;
+            messageElement.textContent = "Lỗi: " + data.message;
         }
     })
     .catch(error => {
-        console.error('Lỗi:', error);
+        messageElement.textContent = "Lỗi: " + error;
     });
 });

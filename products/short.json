@@ -1,0 +1,7 @@
+{
+    "name": "Quần bò",
+    "price": "$24.99",
+    "image": ["short1.jpg", "short2.jpg"],
+	"color" : ["saddlebrown"],
+	"size": ["S", "M", "XL"]
+}

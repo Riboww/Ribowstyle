@@ -73,7 +73,7 @@ body{
 .input-box .show-password {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 36px;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;

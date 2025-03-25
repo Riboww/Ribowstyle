@@ -50,78 +50,40 @@
     </section>
     
     <!-- Product template -->
-    <section class="product"> <!-- JS: Remove ID and change style to grid -->
+    <div id="product-template" class="product">
         <div class="images-container">
-            <img src="" class="current-image" alt=""> <!-- JS: Change current image -->
-            <div class="image-selector"> <!-- JS: Add images here -->
-                <button class="image-button">
-                    <img src="" alt=""> <!-- JS: Change image -->
-                </button>
-            </div>
-        </div>
-        <div class="product-info">
-            <h2 class="product-name"></h2> <!-- JS: Change product name -->
-            <p class="price"></p> <!-- JS: Change price -->
-            <h3>Color</h3>
-            <div class="colors-container"> <!-- JS: Add colors here; Change checked button -->
-                <input type="checkbox" style="background-color: black"></input> <!-- JS: Change background color -->
-            </div>
-            <h3>Size</h3>
-            <div class="sizes-container"> <!-- JS: Add sizes here; Change checked button -->
-                <div class="size-button">
-                    <input type="checkbox"></input>
-                    <p></p> <!-- JS: Change size -->
-                </div>
-            </div>
-            <button class="add-to-cart">
-                <p>Add to cart</p>
-            </button>
-        </div>
-    </section>
-    
-    <!-- Example product -->
-    <section class="product" style="display: none;">
-        <div class="images-container">
-            <img src="images/cap1.jpg" class="current-image" alt="Cap #1">
+            <img src="" class="current-image" alt="">
             <div class="image-selector">
                 <button class="image-button">
-                    <img src="images/cap1.jpg" alt="Cap #1">
-                </button>
-                <button class="image-button">
-                    <img src="images/cap2.jpg" alt="Cap #2">
-                </button>
-                <button class="image-button">
-                    <img src="images/cap3.jpg" alt="Cap #3">
+                    <img src="" alt="">
                 </button>
             </div>
         </div>
         <div class="product-info">
-            <h2 class="product-name">Ribowstyle Cap</h2>
-            <p class="price">$19.99</p>
-            <h3>Color</h3>
+            <h2 class="product-name"></h2>
+            <p class="price"></p>
+            <h3>Màu</h3>
             <div class="colors-container">
                 <input type="checkbox" style="background-color: black"></input>
-                <input type="checkbox" style="background-color: blue"></input>
-                <input type="checkbox" style="background-color: saddlebrown"></input>
             </div>
-            <h3>Size</h3>
+            <h3>Kích thước</h3>
             <div class="sizes-container">
                 <div class="size-button">
                     <input type="checkbox"></input>
-                    <p>10</p>
-                </div>
-                <div class="size-button">
-                    <input type="checkbox"></input>
-                    <p>11</p>
-                </div>
-                <div class="size-button">
-                    <input type="checkbox"></input>
-                    <p>12</p>
+                    <p></p>
                 </div>
             </div>
-                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+			<h3>Số lượng</h3>
+			<div class="quantity-container">
+				<button class="quantity-minus">-</button>
+				<input type="number" class="quantity-input" value="1" min="1">
+				<button class="quantity-plus">+</button>
+			</div>
+            <button class="add-to-cart">
+                <p>Thêm vào giỏ hàng</p>
+            </button>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>

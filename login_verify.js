@@ -1,13 +1,15 @@
+let messageElement = document.getElementById('message');
+
 const urlParams = new URLSearchParams(window.location.search);
-const usernameVar = urlParams.get('username');
-if (!usernameVar) {
+const username = urlParams.get('username');
+if (!username) {
     window.location.href = 'login.html';
 }
 
 document.getElementById('verify-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    document.getElementById('message').textContent = '';
+    messageElement.textContent = '';
     let formData = new FormData(this);
     
     let verifyButton = document.getElementById('verify-button');
@@ -16,7 +18,7 @@ document.getElementById('verify-form').addEventListener('submit', function(event
     fetch('login_verify.php', {
         method: 'POST',
         body: JSON.stringify({
-            username:          usernameVar,
+            username:          username,
             verification_code: formData.get('verification_code')
         })
     })
@@ -25,17 +27,18 @@ document.getElementById('verify-form').addEventListener('submit', function(event
         if (data.success) {
             window.location.href = 'login.html';
         } else {
-            document.getElementById('message').textContent = 'Lỗi: ' + data.message;
+            messageElement.textContent = 'Lỗi: ' + data.message;
         }
         verifyButton.disabled = false;
     })
     .catch(error => {
-        console.error('Lỗi:', error);
+        messageElement.textContent = "Lỗi: " + error;
+        verifyButton.disabled = false
     });
 });
 
 document.getElementById('resend-button').addEventListener('click', function() {
-    document.getElementById('message').textContent = '';
+    messageElement.textContent = '';
     
     let verifyButton = document.getElementById('verify-button');
     verifyButton.disabled = true;
@@ -47,19 +50,21 @@ document.getElementById('resend-button').addEventListener('click', function() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username: usernameVar })
+        body: JSON.stringify({ username: username })
     })
     .then(response => response.json())
     .then(data => {
-        if (data.success) {
-        } else {
-            document.getElementById('message').textContent = "Lỗi: " + data.message;
+        if (!data.success) {
+            messageElement.textContent = "Lỗi: " + data.message;
         }
         this.disabled = false;
         this.textContent = 'Gửi lại';
         verifyButton.disabled = false;
     })
     .catch(error => {
-        console.error('Lỗi:', error);
+        messageElement.textContent = "Lỗi: " + error;
+        this.disabled = false;
+        this.textContent = 'Gửi lại';
+        verifyButton.disabled = false;
     });
 });

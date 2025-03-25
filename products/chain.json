@@ -1,0 +1,7 @@
+{
+    "name": "Vòng",
+    "price": "$10.99",
+    "image": ["chain.jpg"],
+	"color" : ["darksalmon"],
+	"size": ["S", "M", "XL"]
+}

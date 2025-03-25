@@ -1,0 +1,7 @@
+{
+    "name": "Bông tai trái tim",
+    "price": "$4.99",
+    "image": ["earings1.jpg"],
+	"color" : ["white", "darksalmon"],
+	"size": ["S", "M", "XL"]
+}
